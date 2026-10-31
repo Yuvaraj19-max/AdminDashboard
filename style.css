@@ -1,0 +1,153 @@
+/* Reset default browser styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #222;
+}
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background-color: #0e1847f7;
+    color: white;
+    padding: 25px 20px;
+    flex-shrink: 0;
+}
+
+.logo h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 13px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #3f12c7;
+    color: white;
+}
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.top-navbar {
+    height: 75px;
+    background-color: rgb(207, 200, 200);
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.top-navbar h2 {
+    font-size: 22px;
+}
+
+.admin-profile {
+    font-size: 14px;
+    font-weight: bold;
+}
+.dashboard-content {
+    padding: 30px;
+    
+}
+
+.dashboard-content h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.dashboard-content > p {
+    color: #040101;
+    margin-bottom: 30px;
+}
+button#refreshBtn {
+    background-color: #3f12c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.stat-card {
+    background-color: rgb(116, 118, 136);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: #040101;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #000000;
+}   
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        width: 170px;
+        padding: 20px 10px;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .top-navbar {
+        padding: 0 15px;
+    }
+}

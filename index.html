@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Application Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>AdminPanel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="users.html">Users</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="orders.html">Orders</a>
+                <a href="products.html">Products</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <h2>Dashboard</h2>
+                <div class="admin-profile">
+                    <span>Welcome, Admin</span>
+                </div>
+            </header>
+  <!-- Dashboard Content -->
+            <section class="dashboard-content">
+                <h1>Dashboard Overview</h1>
+                <p>
+                    Welcome to your admin dashboard.
+                    Monitor your business performance here.
+                </p>
+                <button id="refreshBtn"> Refresh Dashboard </button>
+ <!-- Statistics Cards -->
+               <div class="stats-container">
+    <article class="stat-card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+    </article>
+
+    <article class="stat-card">
+        <h3>Total Revenue</h3>
+        <p id="totalRevenue">0</p>
+    </article>
+
+    <article class="stat-card">
+        <h3>Total Orders</h3>
+        <p id="totalOrders">0</p>
+    </article>
+
+    <article class="stat-card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+    </article>
+</div>
+            </section>
+        </main>
+    <script src="app.js"></script>
+</body>
+</html>

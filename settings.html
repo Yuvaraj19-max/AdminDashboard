@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - AdminPanel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AdminPanel</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html">Dashboard</a>
+            <a href="users.html">Users</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="orders.html">Orders</a>
+            <a href="products.html">Products</a>
+            <a href="settings.html" class="active">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-navbar">
+            <h2>Settings</h2>
+            <span id="navbarAdmin">Welcome, Admin</span>
+        </header>
+
+
+        <section class="settings-content">
+
+            <div class="settings-heading">
+                <h1>Account Settings</h1>
+                <p>Manage your profile and application preferences.</p>
+            </div>
+
+
+            <!-- Profile Settings -->
+            <div class="settings-card">
+
+                <h2>Profile Information</h2>
+
+                <form id="profileForm">
+
+                    <label for="adminName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="adminName"
+                        required
+                    >
+
+                    <label for="adminEmail">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        required
+                    >
+
+                    <button type="submit">
+                        Save Profile
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Password Settings -->
+            <div class="settings-card">
+
+                <h2>Change Password</h2>
+
+                <form id="passwordForm">
+
+                    <label for="currentPassword">
+                        Current Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        required
+                    >
+
+                    <label for="newPassword">
+                        New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        minlength="8"
+                        required
+                    >
+
+                    <label for="confirmPassword">
+                        Confirm New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        minlength="8"
+                        required
+                    >
+
+                    <button type="submit">
+                        Update Password
+                    </button>
+
+                </form>
+
+                <p class="settings-note">
+                    Demo interface only. Password changes are not
+                    authenticated or stored in this frontend project.
+                </p>
+
+            </div>
+
+
+            <!-- Appearance Settings -->
+            <div class="settings-card">
+
+                <h2>Appearance</h2>
+
+                <div class="setting-row">
+
+                    <div>
+                        <h3>Dark Mode</h3>
+                        <p>Switch between light and dark themes.</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider"></span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notification Settings -->
+            <div class="settings-card">
+
+                <h2>Notification Preferences</h2>
+
+                <div class="setting-row">
+
+                    <div>
+                        <h3>Email Notifications</h3>
+                        <p>Receive updates through email.</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" id="emailNotifications">
+                        <span class="slider"></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <h3>Order Notifications</h3>
+                        <p>Receive notifications about new orders.</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" id="orderNotifications">
+                        <span class="slider"></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <h3>Product Notifications</h3>
+                        <p>Receive low-stock product alerts.</p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" id="productNotifications">
+                        <span class="slider"></span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Logout -->
+            <div class="settings-card logout-card">
+
+                <h2>Account Actions</h2>
+
+                <p>Sign out from your administrator session.</p>
+
+                <button type="button" id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="settings.js"></script>
+
+</body>
+</html>

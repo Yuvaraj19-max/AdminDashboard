@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orders - AdminPanel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="orders.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>AdminPanel</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="index.html">Dashboard</a>
+                <a href="users.html">Users</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="orders.html" class="active">Orders</a>
+                <a href="products.html">Products</a>
+                <a href="settings.html">Settings</a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="top-navbar">
+                <h2>Orders Management</h2>
+                <span>Welcome, Admin</span>
+            </header>
+
+
+            <section class="orders-content">
+
+                <div class="orders-header">
+
+                    <div>
+                        <h1>Orders</h1>
+                        <p>Manage and monitor customer orders.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Order Statistics -->
+
+                <div class="order-stats">
+
+                    <article class="order-stat-card">
+                        <h3>Total Orders</h3>
+                        <p id="totalOrders">0</p>
+                    </article>
+
+                    <article class="order-stat-card">
+                        <h3>Pending</h3>
+                        <p id="pendingOrders">0</p>
+                    </article>
+
+                    <article class="order-stat-card">
+                        <h3>Processing</h3>
+                        <p id="processingOrders">0</p>
+                    </article>
+
+                    <article class="order-stat-card">
+                        <h3>Delivered</h3>
+                        <p id="deliveredOrders">0</p>
+                    </article>
+
+                </div>
+
+
+                <!-- Search and Filter -->
+
+                <div class="order-controls">
+
+                    <input
+                        type="text"
+                        id="searchOrder"
+                        placeholder="Search by order ID or customer..."
+                    >
+
+                    <select id="statusFilter">
+
+                        <option value="All">All Orders</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Orders Table -->
+
+                <div class="order-table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="orderTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="orders.js"></script>
+
+</body>
+</html>

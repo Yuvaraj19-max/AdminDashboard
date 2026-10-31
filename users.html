@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>AdminPanel</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html">Dashboard</a>
+                <a href="users.html" class="active">Users</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="orders.html">Orders</a>
+                <a href="products.html">Products</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-navbar">
+                <h2>User Management</h2>
+                <span>Welcome, Admin</span>
+            </header>
+
+            <section class="dashboard-content">
+
+                <div class="user-header">
+
+                    <div>
+                        <h1>Users</h1>
+                        <p>Manage your application users.</p>
+                    </div>
+
+                    <button id="addUserBtn">
+                        + Add User
+                    </button>
+
+                </div>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search users..."
+                >
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userTableBody">
+                            <!-- JavaScript will insert users here -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- User Form -->
+
+                <div id="userModal" class="modal">
+
+                    <div class="modal-content">
+
+                        <h2 id="modalTitle">Add User</h2>
+
+                        <form id="userForm">
+
+                            <input type="hidden" id="userId">
+
+                            <label>Name</label>
+                            <input type="text" id="name" required>
+
+                            <label>Email</label>
+                            <input type="email" id="email" required>
+
+                            <label>Role</label>
+                            <select id="role">
+                                <option value="User">User</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+
+                            <button type="submit">Save User</button>
+
+                            <button type="button" id="cancelBtn">
+                                Cancel
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="users.js"></script>
+
+</body>
+</html>
